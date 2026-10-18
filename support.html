@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171725" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'self'; form-action 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Support — Vellum</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3f1eb;
+        --surface: #fffdfa;
+        --ink: #191923;
+        --muted: #6f6c78;
+        --line: #e5e1d8;
+        --brand: #5a55e8;
+        --rail: #17161f;
+        --serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+        --sans: 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(900px 600px at 85% -10%, rgba(90, 85, 232, 0.08), transparent 60%),
+          var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.65;
+      }
+      .top {
+        background: var(--rail); color: #f8f5ee; padding: 18px 24px;
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      }
+      .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.03em; font-size: 18px; }
+      .mark {
+        width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+        background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1);
+      }
+      .mark svg { width: 23px; height: 23px; }
+      .back { color: #c7c4ff; text-decoration: none; font-size: 13px; font-weight: 700; }
+      .back:hover { text-decoration: underline; }
+      main { max-width: 780px; margin: 0 auto; padding: 54px 24px 80px; }
+      .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--brand); }
+      h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 6vw, 56px); line-height: 1.02; letter-spacing: -.04em; margin: 10px 0 14px; }
+      .lede { font-size: 16px; color: var(--muted); max-width: 620px; }
+      .contact {
+        display: flex; align-items: center; justify-content: space-between; gap: 20px;
+        background: #17161f; color: #faf8f2; padding: 24px 26px; border-radius: 18px; margin-top: 26px;
+      }
+      .contact h2 { font-size: 19px; margin: 0 0 3px; letter-spacing: -.02em; }
+      .contact p { margin: 0; color: #b4b0c0; font-size: 13px; }
+      .contact a {
+        flex: 0 0 auto; background: linear-gradient(115deg, #5a55e8, #0f9d8c); color: #fff;
+        text-decoration: none; font-weight: 800; font-size: 13px; padding: 11px 16px; border-radius: 10px;
+      }
+      .contact a:hover { filter: brightness(1.08); }
+      .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 9px 30px; margin-top: 22px; box-shadow: 0 10px 30px -18px rgba(25,25,35,.25); }
+      details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+      details:last-child { border-bottom: 0; }
+      summary { cursor: pointer; font-weight: 800; font-size: 14px; list-style: none; display: flex; gap: 10px; align-items: center; }
+      summary::-webkit-details-marker { display: none; }
+      summary::before { content: '+'; color: var(--brand); font-size: 18px; line-height: 1; width: 16px; }
+      details[open] summary::before { content: '−'; }
+      details p { color: #4d4c58; font-size: 13.5px; margin: 9px 0 2px 26px; }
+      details ul { color: #4d4c58; font-size: 13.5px; margin: 9px 0 2px 26px; padding-left: 18px; }
+      .info { background: #efedff; border: 1px solid #ddd9ff; border-radius: 12px; padding: 13px 16px; margin-top: 20px; font-size: 12.5px; color: #3f3ac9; }
+      .nav-links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+      .nav-links a { color: var(--brand); font-weight: 700; font-size: 13px; }
+      footer { border-top: 1px solid var(--line); margin-top: 36px; padding-top: 18px; font-size: 12px; color: #8b8994; }
+      @media (max-width: 540px) {
+        main { padding-top: 34px; }
+        .contact { flex-direction: column; align-items: flex-start; }
+        .card { padding: 6px 20px; }
+        .top { padding: 14px 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M7 7.5 16 25 25 7.5" stroke="#f8f6ef" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="25" cy="7.5" r="2.2" fill="#f2b37c" />
+          </svg>
+        </span>
+        Vellum.
+      </div>
+      <a class="back" href="./">← Back to the builder</a>
+    </header>
+    <main>
+      <div class="eyebrow">Support</div>
+      <h1>How can we help?</h1>
+      <p class="lede">Quick answers for Vellum, the local-first resume builder for Windows. If something still isn't right, open a support request.</p>
+
+      <div class="contact">
+        <div>
+          <h2>Open a support request</h2>
+          <p>Email <a href="mailto:support@comwil.ch">support@comwil.ch</a> or open a public issue.</p>
+        </div>
+        <a href="mailto:support@comwil.ch">Email support →</a>
+      </div>
+
+      <div class="card">
+        <details open>
+          <summary>Where is my resume saved?</summary>
+          <p>Vellum stores your resume locally in the app on this device using browser storage. There is no Vellum account or cloud database. Use <strong>File menu → Export JSON backup</strong> to save a portable copy, and <strong>Clear all local data</strong> to remove everything.</p>
+        </details>
+        <details>
+          <summary>How do I export a PDF?</summary>
+          <p>Click <strong>Export PDF</strong> in the preview toolbar (or press <strong>Ctrl+P</strong>). In the Windows print dialog choose <strong>Microsoft Print to PDF</strong> or <strong>Save as PDF</strong>. Vellum supplies a Letter-size print stylesheet automatically.</p>
+        </details>
+        <details>
+          <summary>How does the ATS score work?</summary>
+          <p>Vellum simulates six signals: role-keyword coverage, quantified impact, writing quality, contact completeness, section structure, and template parseability. It is a practical guide, not a guarantee. Recruiters and ATS vendors use different rules. Aim for 85+ and always tailor the content to the specific role.</p>
+        </details>
+        <details>
+          <summary>How do I use the Pro trial?</summary>
+          <p>Open <strong>Upgrade to Pro</strong> and start the 7-day trial. This preview build also accepts the demo code <strong>VELLUM-DEMO</strong>. No payment is collected in the preview. Role Studio unlocks after Pro is active.</p>
+        </details>
+        <details>
+          <summary>Why can’t Vellum read a job URL?</summary>
+          <p>Some job boards block external readers or require a login. Paste the description directly into Role Studio instead. For a job board with many listings, open the exact role first — importing a whole board produces weaker keyword matches.</p>
+        </details>
+        <details>
+          <summary>Can I move my resume to another device?</summary>
+          <p>Yes. Use <strong>File menu → Export JSON backup</strong> on the old device and <strong>Import JSON backup</strong> on the new one. Your templates, sections, and target role are included.</p>
+        </details>
+      </div>
+
+      <div class="info">
+        Vellum is a local-first app. We cannot recover a resume that was deleted from local storage and never exported. Export a backup before clearing device data.
+      </div>
+
+      <div class="card" style="padding:20px 24px">
+        <strong style="font-size:14px">Prefer the issue tracker?</strong>
+        <p style="color:#4d4c58;font-size:13.5px;margin:6px 0 0">
+          <a href="https://github.com/Greendenox/vellum-resume-builder/issues/new" target="_blank" rel="noreferrer">Open a public support request</a>
+          for non-sensitive technical issues. Please do not post resumes, contact details, or other personal information.
+        </p>
+      </div>
+
+      <div class="nav-links">
+        <a href="./">Resume builder</a>
+        <a href="./privacy.html">Privacy policy</a>
+      </div>
+      <footer>Vellum · Comwil · Microsoft Store app</footer>
+    </main>
+  </body>
+</html>

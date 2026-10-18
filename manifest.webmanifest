@@ -1,0 +1,113 @@
+{
+  "name": "Vellum \u2014 Resume Builder",
+  "short_name": "Vellum",
+  "description": "Build a beautiful, ATS-ready resume with live preview, six templates, role-keyword tailoring, and a live ATS score.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "background_color": "#f5f3ee",
+  "theme_color": "#171725",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "productivity",
+    "business",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Open builder",
+      "short_name": "Builder",
+      "description": "Edit your resume with live preview",
+      "url": "./?view=builder",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Check ATS score",
+      "short_name": "ATS Check",
+      "description": "See how an ATS reads your resume",
+      "url": "./?view=ats",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./screenshots/builder-wide.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Live resume editor with instant preview and ATS score"
+    },
+    {
+      "src": "./screenshots/ats-wide.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "ATS breakdown with keyword matching and priority fixes"
+    },
+    {
+      "src": "./screenshots/templates-wide.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Six designer resume templates"
+    },
+    {
+      "src": "./screenshots/pro-wide.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Vellum Pro role tailoring and plan options"
+    },
+    {
+      "src": "./screenshots/builder-narrow.png",
+      "sizes": "780x1688",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Vellum resume builder on a phone"
+    }
+  ],
+  "prefer_related_applications": false
+}

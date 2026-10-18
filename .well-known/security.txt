@@ -1,0 +1,5 @@
+Contact: mailto:support@comwil.ch
+Expires: 2027-10-18T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://greendenox.github.io/vellum-resume-builder/.well-known/security.txt
+Policy: https://greendenox.github.io/vellum-resume-builder/support.html

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171725" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'self'; form-action 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Privacy — Vellum</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3f1eb;
+        --surface: #fffdfa;
+        --ink: #191923;
+        --muted: #6f6c78;
+        --line: #e5e1d8;
+        --brand: #5a55e8;
+        --rail: #17161f;
+        --serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+        --sans: 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(900px 600px at 85% -10%, rgba(90, 85, 232, 0.08), transparent 60%),
+          var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.65;
+      }
+      .top {
+        background: var(--rail);
+        color: #f8f5ee;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.03em; font-size: 18px; }
+      .mark {
+        width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+        background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1);
+      }
+      .mark svg { width: 23px; height: 23px; }
+      .back { color: #c7c4ff; text-decoration: none; font-size: 13px; font-weight: 700; }
+      .back:hover { text-decoration: underline; }
+      main { max-width: 780px; margin: 0 auto; padding: 54px 24px 80px; }
+      .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--brand); }
+      h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 6vw, 56px); line-height: 1.02; letter-spacing: -.04em; margin: 10px 0 14px; }
+      .lede { font-size: 16px; color: var(--muted); max-width: 620px; }
+      .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 26px 30px; margin-top: 26px; box-shadow: 0 10px 30px -18px rgba(25,25,35,.25); }
+      h2 { font-size: 17px; letter-spacing: -.02em; margin: 28px 0 7px; }
+      h2:first-child { margin-top: 0; }
+      p, li { color: #4d4c58; font-size: 14px; }
+      ul { padding-left: 20px; }
+      li { margin: 5px 0; }
+      a { color: var(--brand); }
+      .short { background: #efedff; border: 1px solid #ddd9ff; border-radius: 12px; padding: 14px 16px; margin-top: 18px; font-size: 13.5px; color: #3f3ac9; }
+      .meta { margin-top: 26px; font-size: 12px; color: #8b8994; }
+      .nav-links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+      .nav-links a { font-weight: 700; font-size: 13px; }
+      footer { border-top: 1px solid var(--line); margin-top: 36px; padding-top: 18px; font-size: 12px; color: #8b8994; }
+      @media (max-width: 540px) {
+        main { padding-top: 34px; }
+        .card { padding: 20px; }
+        .top { padding: 14px 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M7 7.5 16 25 25 7.5" stroke="#f8f6ef" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="25" cy="7.5" r="2.2" fill="#f2b37c" />
+          </svg>
+        </span>
+        Vellum.
+      </div>
+      <a class="back" href="./">← Back to the builder</a>
+    </header>
+    <main>
+      <div class="eyebrow">Privacy</div>
+      <h1>Your resume stays yours.</h1>
+      <p class="lede">Vellum is local-first. There is no account, no resume database, and no analytics.</p>
+      <div class="short">
+        The short version: your resume content is saved in this app on your device. We do not sell it, train on it, or share it. The only optional outbound request is a job-posting URL you choose to import.
+      </div>
+
+      <div class="card">
+        <h2>What is stored on your device</h2>
+        <ul>
+          <li>Resume content you enter: contact details, summary, experience, education, skills, projects, and certifications.</li>
+          <li>Your template, accent color, theme, active resume, and onboarding state.</li>
+          <li>Your local Pro demo/trial state.</li>
+        </ul>
+        <p>This data is kept in the app's local storage. It leaves the device only if you export a JSON backup or save a PDF yourself.</p>
+
+        <h2>Job URL import</h2>
+        <p>If you choose <strong>Role Studio → Import from URL</strong>, the URL is sent to a third-party reader service (currently Jina Reader, with AllOrigins as a fallback) to retrieve the public posting text. Do not import confidential, internal, or authenticated postings. You can always paste the description instead.</p>
+        <p>Imported text is processed in the app. Vellum has no server that receives it.</p>
+
+        <h2>Microsoft Store purchases</h2>
+        <p>In a production Store release, Microsoft processes any Pro purchase and provides the app with entitlement status only. Microsoft's privacy statement applies to the transaction. The current preview build uses a local demo license and does not collect payment.</p>
+
+        <h2>Analytics, ads, and tracking</h2>
+        <p>No analytics SDK, advertising SDK, fingerprinting, or cross-site tracking is included. We do not collect telemetry.</p>
+
+        <h2>Your controls</h2>
+        <ul>
+          <li><strong>Export:</strong> File menu → Export JSON backup.</li>
+          <li><strong>Delete:</strong> File menu → Clear all local data.</li>
+          <li><strong>Avoid external fetch:</strong> use Paste text instead of URL import.</li>
+          <li><strong>Browser storage:</strong> clear site data for Vellum to remove local resumes.</li>
+        </ul>
+
+        <h2>Security and children</h2>
+        <p>Data is protected by your Windows account and device security. Anyone with access to your unlocked device and browser profile may be able to view it. Vellum is a general productivity tool and is not directed at children under 13.</p>
+
+        <h2>Contact</h2>
+        <p>Questions or requests? Email <a href="mailto:support@comwil.ch">support@comwil.ch</a> or use the <a href="./support.html">support page</a>. Do not include a full resume or sensitive personal information in a public support request.</p>
+
+        <p class="meta">Last updated: October 18, 2026 · Vellum 1.0</p>
+      </div>
+
+      <div class="nav-links">
+        <a href="./">Resume builder</a>
+        <a href="./support.html">Support</a>
+      </div>
+      <footer>Vellum is a local-first resume builder for Windows.</footer>
+    </main>
+  </body>
+</html>
