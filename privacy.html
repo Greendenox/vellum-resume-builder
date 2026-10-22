@@ -94,11 +94,15 @@
       <div class="card">
         <h2>What is stored on your device</h2>
         <ul>
-          <li>Resume content you enter: contact details, summary, experience, education, skills, projects, and certifications.</li>
+          <li>Resume content you enter: contact details, summary, experience, education, skills, projects, certifications, and an optional profile photo.</li>
           <li>Your template, accent color, theme, active resume, and onboarding state.</li>
           <li>Your local Pro launch-preview state.</li>
+          <li>An optional profile photo, cropped and re-encoded as a small JPEG data URL with EXIF/GPS metadata removed.</li>
         </ul>
         <p>This data is kept in the app's local storage. It leaves the device only if you export a JSON backup or save a PDF yourself.</p>
+
+        <h2>Profile photos</h2>
+        <p>If you add a photo, it is processed entirely in the app: cropped to a square, resized to at most 512 pixels, re-encoded through a canvas, and stripped of EXIF metadata such as GPS location. It is stored with your resume in local storage and is never uploaded to a Vellum server.</p>
 
         <h2>Job URL import</h2>
         <p>If you choose <strong>Role Studio → Import from URL</strong>, the URL is sent to a third-party reader service (currently Jina Reader, with AllOrigins as a fallback) to retrieve the public posting text. Do not import confidential, internal, or authenticated postings. You can always paste the description instead.</p>
