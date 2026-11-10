@@ -1,5 +1,5 @@
 /* Vellum service worker — offline shell with runtime asset caching. */
-const CACHE = 'vellum-shell-v1'
+const CACHE = 'vellum-shell-v2'
 const PRECACHE = ['./', './index.html', './manifest.webmanifest', './icon.svg']
 
 self.addEventListener('install', (event) => {
